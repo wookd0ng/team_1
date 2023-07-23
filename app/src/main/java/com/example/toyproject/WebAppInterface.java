@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class WebAppInterface {
-    Context context;        //뭐에쓰는겨
+    Context context;
     File cacheFile;
 
 
