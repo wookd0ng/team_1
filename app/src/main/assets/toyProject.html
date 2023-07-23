@@ -19,12 +19,12 @@
 <button onclick="movePage('file:///android_asset/toyProject2.html')">메뉴명으로 취합</button><br><br>
 <button onclick="movePage('file:///android_asset/toyProject3.html')">인원 - 선호 메뉴로 취합</button>
 <p onclick="loadData()">+ 저장 이력 불러오기</p>
-<div id="box"></div>
+<div id="box" style="padding-bottom: 100px;"></div>     <!-- 하단과 겹치지 않기 위해 padding-bottom을 버튼과 같은 크기로 준다 -->
 <div style="position: fixed; bottom: 0; width: 100%;">
     <ul>
         <li><button>부가기능</button></li>
         <li><button>홈</button></li>
-        <li><button>설정</button></li>
+        <li><button onclick="moveApp()">설정</button></li>
     </ul>
 </div>
 </body>

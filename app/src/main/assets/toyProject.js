@@ -5,3 +5,7 @@ function loadData() {
 function movePage(url) {
     location.href=url
 }
+
+function moveApp(){
+    Android.callApp();
+}
