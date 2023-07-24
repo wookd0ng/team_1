@@ -10,10 +10,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.io.File;
+import java.io.FileOutputStream;
+
 
 public class MainActivity extends AppCompatActivity {
 
     WebView myWebView;
+    File cache;
 
     @SuppressLint("JavascriptInterface")
     @Override
@@ -28,7 +32,13 @@ public class MainActivity extends AppCompatActivity {
         myWebView.setWebChromeClient(new WebChromeClient());
         myWebView.setWebViewClient(new WebViewClient());
 
-        myWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
+        try {
+            cache = File.createTempFile("order", ".txt", this.getCacheDir());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        myWebView.addJavascriptInterface(new WebAppInterface(this, cache), "Android");
     }
 
     public void onBackPressed(){    //뒤로가기 버튼 눌렀을 때

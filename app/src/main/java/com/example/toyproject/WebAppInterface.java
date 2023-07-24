@@ -18,13 +18,9 @@ public class WebAppInterface {
 
     //Uncaught Error: Java exception was raised during method invocation 발생으로 try catch 사용
 
-    WebAppInterface(Context c){
+    WebAppInterface(Context c,  File cache){
         context = c;
-        try {
-            cacheFile = File.createTempFile("order", ".txt", c.getCacheDir());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        cacheFile = cache;
     }
 
     @JavascriptInterface
