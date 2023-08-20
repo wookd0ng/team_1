@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 인원-선호 메뉴 페이지-->
+    <title>PreferMenu</title>  
+    <link rel="stylesheet" href="PreferMenu.css">
+    <script src="PreferMenu.js"></script>
+
+<!-- css --> <style></style>	
+<!-- js --> <script type="text/javascript"></script>
+</head>
+
+<!-- ---------------------------------------------------------------------------------------- -->
+<body>
+<!-- 상단바 -->
+<header>
+<nav class="navbar">
+    <p class="nav">
+        <a href="#" id="top">주문취합App</a>
+    </p>
+</nav>
+</header>
+<hr>
+
+<!-- 폼 작성 -->
+<form name="form" method="post" action="">
+
+<table id="_table">
+<!-- thead -->
+<thead>
+    <tr>
+        <th>이름</th>
+        <th>메뉴</th>
+        <th>
+            <input id="add" type="button" onClick="addRow()" value="추가">
+        </th>
+    </tr>
+</thead>
+
+<!-- tbody -->
+<tbody id="table_body">
+    <tr>
+        <td>
+            <input type="text" class="form_control" placeholder="홍길동" style="width: 80%;" readonly>
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="아아에 시럽 두 번" style="width: 90%;" readonly>
+        </td>
+        <td> 
+            <input type="button" id="ex" value="예시" >
+        </td>
+    </tr>
+</tbody>
+</table>
+
+</form>
+
+<!-- 확인 버튼 -->
+<input type="submit" id="submitbtn" value="확인">
+
+</body>
+<!---->
+</html>
